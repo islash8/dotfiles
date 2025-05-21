@@ -1,0 +1,23 @@
+# ~/.config/kitty/kitty.conf
+#
+# This is initial configuration for kitty
+#
+# This file can be opened using shortcut: ctrl+shift+f2
+# You can also referesh the configuration using: ctrl+shift+f5
+#
+
+# --- Fonts ---
+# Font family. You can use 'kitty list-fonts' to see available fonts
+font_family ShureTechMono Nerd Font Mono
+font_size 18 
+bold_font auto
+italic_font auto
+bold_italic_font auto
+
+disable_ligatures cursor
+
+
+# BEGIN_KITTY_THEME
+# Ayu
+include current-theme.conf
+# END_KITTY_THEME
