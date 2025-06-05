@@ -44,4 +44,4 @@ c.tabs.show = "always"
 c.tabs.favicons.show = "always"
 
 # change tabs size
-c.tabs.width = "10%"
+c.tabs.padding = {"top": 4, "bottom": 4, "left": 4, "right": 4}

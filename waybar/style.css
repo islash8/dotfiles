@@ -1,0 +1,57 @@
+/* ~/.config/waybar/style.css */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "FiraCode Nerd Font", "Symbols Nerd Font";
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(40, 40, 40, 0.8); /* Dark, semi-transparent background */
+    color: #ffffff; /* White text */
+    border-bottom: 2px solid #282828;
+}
+
+/* ----- Workspaces ----- */
+#workspaces {
+    background: #1d2021;
+    margin: 5px 5px 5px 10px;
+    padding: 0px 5px;
+    border-radius: 10px;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    color: #665c54; /* Dim color for inactive workspaces */
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    color: #d79921; /* Gold accent for active workspace */
+}
+
+#workspaces button.urgent {
+    background-color: #fb4934; /* Red for urgent workspace */
+}
+
+/* ----- Modules ----- */
+#clock, #cpu, #memory, #network, #pulseaudio, #tray, #custom-power {
+    padding: 0px 10px;
+    margin: 5px 0px;
+}
+
+#custom-power {
+    color: #fb4934;
+    margin-right: 10px;
+}
+
+#pulseaudio.muted {
+    color: #928374;
+}

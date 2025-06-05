@@ -1,0 +1,87 @@
+// ~/.config/waybar/config.jsonc
+{
+    // Position of the bar
+    "layer": "top",
+    "position": "top",
+
+    // Bar height
+    "height": 35,
+
+    // Modules placement
+    "modules-left": ["hyprland/workspaces", "hyprland/mode"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["tray", "pulseaudio", "network", "cpu", "memory", "clock", "custom/power"],
+
+    // Module specifics
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "default": ""
+        },
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "  {:%I:%M %p}",
+        "format-alt": "  {:%a, %b %d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": true,
+        "on-click": "kitty --title btop sh -c 'btop'"
+    },
+    "memory": {
+        "format": "  {}%",
+        "on-click": "kitty --title btop sh -c 'btop'"
+    },
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀  {ifname}",
+        "format-disconnected": "󰖪 Disconnected",
+        "tooltip-format": "{ipaddr} | {ifname}",
+        "on-click": "kitty nmtui"
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "  Muted",
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        }
+    },
+    "custom/power": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Power Menu",
+        "on-click": "wlogout" // You can also use a script here
+    }
+}
