@@ -20,8 +20,13 @@ offset = "200%"
 
 [scratchpads.taskbar]
 animation = "fromLeft"
-command = "kitty --class kitty-taskbar -e htop"
+command = "kitty --class kitty-taskbar -e btop"
 class = "kitty-taskbar"
 size = "30% 80%"
 offset = "200%"
 
+[scratchpads.vimwiki]
+animation = "fromRight"
+command = "kitty --class kitty-vimwiki -e nvim ~/vimwiki/index.md"
+class = "kitty-vimwiki"
+size = "50% 60%"
